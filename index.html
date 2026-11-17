@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTIFY | Generative Art Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">ARTIFY<span>.</span></div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#studio">Studio</a>
+            <a href="#gallery">My Gallery</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <!-- Landing Page -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">YOUR CREATIVITY, REIMAGINED</p>
+
+            <h1>Turn imagination<br>
+                into <span>art.</span>
+            </h1>
+
+            <p class="description">
+                Explore the world of generative art.
+                Create unique digital masterpieces using
+                colours, patterns and algorithms.
+            </p>
+
+            <button class="primary-btn" onclick="openStudio()">
+                Start Creating ↗
+            </button>
+        </div>
+
+        <div class="hero-art">
+            <div class="art-circle circle-one"></div>
+            <div class="art-circle circle-two"></div>
+            <div class="art-circle circle-three"></div>
+        </div>
+    </section>
+
+    <!-- Art Studio -->
+    <section class="studio" id="studio">
+        <h2>Your Creative Studio</h2>
+        <p>Your canvas is waiting. Let's create something beautiful.</p>
+
+        <div class="art-studio">
+
+    <div class="controls">
+
+        <h3>Art Settings</h3>
+
+        <label>Choose Art Style</label>
+        <select id="artStyle">
+            <option value="geometric">Geometric</option>
+            <option value="flowing">Flowing</option>
+            <option value="fractal">Fractal</option>
+        </select>
+
+        <label>Choose Mood</label>
+        <select id="artMood">
+            <option value="dreamy">Dreamy</option>
+            <option value="cyberpunk">Cyberpunk</option>
+            <option value="sunset">Sunset</option>
+            <option value="ocean">Ocean</option>
+            <option value="monochrome">Monochrome</option>
+        </select>
+
+        <label>Complexity: <span id="complexityValue">50</span>%</label>
+        <input type="range" id="complexity" min="10" max="100" value="50">
+
+        <label>Symmetry</label>
+        <select id="symmetry">
+            <option value="4">4 Fold</option>
+            <option value="6">6 Fold</option>
+            <option value="8">8 Fold</option>
+            <option value="12">12 Fold</option>
+        </select>
+
+        <button onclick="generateArt()">Generate Artwork</button>
+        <button onclick="surpriseMe()">Surprise Me</button>
+
+        <button onclick="saveArtwork()">Save Artwork</button>
+        <button onclick="downloadArt()">Download PNG</button>
+
+    </div>
+
+    <div class="canvas-area">
+        <canvas id="artCanvas" width="700" height="500"></canvas>
+        <p id="artMessage">Your masterpiece will appear here.</p>
+    </div>
+
+</div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <h2>My Gallery</h2>
+        <p>Your saved creations will appear here.</p>
+    </section>
+
+    <!-- About the Project -->
+<section class="about" id="about">
+    <h2>About the Project</h2>
+
+    <div class="about-content">
+        <h3>Objective</h3>
+        <p>
+            To demonstrate how programming concepts can be used in
+            creative computing by building an application that
+            generates unique digital artwork using code.
+        </p>
+
+        <h3>Features</h3>
+        <ul>
+            <li>Three generative art styles: Geometric, Flowing and Fractal</li>
+            <li>Five colour palettes based on different moods</li>
+            <li>Controls for complexity and symmetry</li>
+            <li>Surprise Me option to generate random combinations</li>
+            <li>Save artwork in the browser and download it as a PNG</li>
+        </ul>
+
+        <h3>Programming Concepts Used</h3>
+        <ul>
+            <li><strong>Randomisation:</strong> creates varied shapes, colours and patterns</li>
+            <li><strong>Loops:</strong> draw repeated shapes and flowing lines</li>
+            <li><strong>Recursion:</strong> creates branching fractal patterns</li>
+            <li><strong>Trigonometry:</strong> uses sine and cosine to position and draw shapes</li>
+            <li><strong>DOM Events:</strong> handle user interactions and controls</li>
+            <li><strong>LocalStorage:</strong> saves artwork in the browser</li>
+        </ul>
+
+        <h3>Technologies</h3>
+        <p>
+            HTML5, CSS3 & JavaScript.
+            No external libraries are used.
+        </p>
+    </div>
+</section>
+
+    <footer>
+        ARTIFY 2026 | Where Algorithms Meet Art
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
